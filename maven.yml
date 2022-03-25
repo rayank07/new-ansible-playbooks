@@ -25,5 +25,17 @@
       src: /opt/apache-maven-3.6.3-bin.tar.gz
       dest: /opt
       remote_src: yes
-
+   
+   - name: renaming maven
+     command: mv apache-maven-3.6.3 apachemaven
+     
+     - name: Update hosts
+       lineinfile:
+         path: /etc/hosts
+         state: present
+         line: "{{ item }}"
+       with_items:
+  - '192.168.0.108 K8_slave'
+  - '192.168.0.105 K8_master
+     
   
