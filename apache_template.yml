@@ -3,25 +3,20 @@
 
 # The minus in YAML this indicates a list item.  The playbook contains a list
 # of plays, with each play being a dictionary
--
-
-  # Hosts: where our play will run and options it will run with
+- name: Apache Webservers Demo
   hosts: all
   become: yes
-  gather_facts: yes
-  #strategy: free
+  vars:
+    - Name: Rayank
 
-  # Tasks: the list of tasks that will be executed within the play, this section
-  # can also be used for pre and post tasks
   tasks:
-    - name: update the casche
-      apt: update_cache=yes
 
-    #- name: install apache2
-    - name: install cmatrix
-      apt: name=cmatrix state=latest
+    - name: Print A Name
+      debug:
+         msg: "Name is {{ Name }}"
 
-    #- name: start the apache service
-     # service: name=apache2 state=started
-      
+    - name: Install apache Service
+      apt:
+        name: apache2
+        state: present
  
