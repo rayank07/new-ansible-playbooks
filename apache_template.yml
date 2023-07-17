@@ -6,9 +6,9 @@
 -
 
   # Hosts: where our play will run and options it will run with
-  hosts: client2
+  hosts: all
   #gather_facts: false
-  strategy: free
+  #strategy: free
 
   # Tasks: the list of tasks that will be executed within the play, this section
   # can also be used for pre and post tasks
@@ -22,7 +22,4 @@
     - name: start the apache service
       service: name=apache2 state=started
       
-    - name: create your index page 
-      ansible.builtin.template:
-        src: "index.html.j2"
-        dest: "/var/www/html/index.html" 
+ 
