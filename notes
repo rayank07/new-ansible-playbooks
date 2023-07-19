@@ -6,3 +6,9 @@ but suppose if your inventory changes everyday and on each day you I new set on 
 and we can run the playbook 
 
 ansible-playbook -i pythonScript.py healthcheck.yml
+
+
+
+### Creating custom modules ##
+suppose if you want to create your own custom modules :-
+https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html#creating-a-module
