@@ -1,6 +1,6 @@
 ---
 - name: Stop Apache Service
-  hosts: all
+  hosts: 18.208.219.209
   become: yes
 
   tasks:
