@@ -1,7 +1,7 @@
 ---
 - name: stop service
   hosts: "{{ host }}"
-  remote_user: root
+  remote_user: ubuntu
   become: yes
   connection: ssh
   gather_facts: yes
