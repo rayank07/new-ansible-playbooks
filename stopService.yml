@@ -1,7 +1,10 @@
 ---
-- name: Stop Apache Service
-  hosts: 18.208.219.209
+- name: stop service
+  hosts: "{{ host }}"
+  remote_user: root
   become: yes
+  connection: ssh
+  gather_facts: yes
 
   tasks:
     - name: Stop Apache Service
