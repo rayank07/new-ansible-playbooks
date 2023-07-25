@@ -1,0 +1,12 @@
+- name: Install apt using task
+  hosts: "{{ host }}"
+  remote_user: root
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+    - name: Install apt package
+      package:
+        name: apt
+        state: present
