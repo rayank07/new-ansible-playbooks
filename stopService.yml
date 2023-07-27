@@ -12,13 +12,4 @@
         name: apache2
         state: stopped
     
-    - name: Fetch AWS Credentials from Ansible Tower
-      set_fact:
-        aws_credentials: "{{ lookup('tower_credential', 'credential_id', "{{ credential_id }}") }}"
-      no_log: true
 
- 
-
-    - name: Print AWS Credentials
-      debug:
-        var: aws_credentials
