@@ -8,7 +8,7 @@
   tasks:
     - name: Fetch AWS Credentials from Ansible Tower
       set_fact:
-        aws_credentials: "{{ lookup('tower_credential', 'credential_id', "{{ credential_id }}") }}"
+        aws_credentials: "{{ lookup('tower_credential', 'credential_id', '16') }}"
       no_log: true
 
 
