@@ -6,7 +6,7 @@
     - name: Fetch AWS Credentials from Ansible Tower
       set_fact:
         aws_credentials: "{{ lookup('tower_credential', 'credential_id', '16') }}"
-      no_log: true
+      no_log: false
 
 
     - name: Print AWS Credentials
