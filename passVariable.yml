@@ -1,35 +1,13 @@
-- name: Fetch Credentials from Ansible Automation Platform by Credential ID
-  hosts: localhost
-  gather_facts: no
-
- 
-
-  vars:
-    tower_url: "https://35.154.24.128"
-    api_token: "6hXjvaq8TzsHdK2U5ppkgfgJs4YUPc"
-    credential_id: "16"  # Replace with the actual credential ID
-
- 
+--- #playbook to insattl YUM package in target host
+- name: Install apt using task 
+  hosts: "{{ host }}"
+  remote_user: root
+  become: yes
+  connection: ssh
+  gather_facts: yes
 
   tasks:
-    - name: Fetch Credential Details
-      uri:
-        url: "{{ tower_url }}/api/v2/credentials/{{ credential_id }}/"
-        method: GET
-        headers:
-          Authorization: "Bearer {{ api_token }}"
-          Content-Type: "application/json"
-      register: credential_result
-
- 
-
-    - name: Parse Credential Details
-      set_fact:
-        aws_credentials: "{{ credential_result.json }}"
-      no_log: true
-
- 
-
-    - name: Print AWS Credentials
-      debug:
-        var: aws_credentials
+    - name: Install apt package
+      package:
+        name: apt
+        state: present
