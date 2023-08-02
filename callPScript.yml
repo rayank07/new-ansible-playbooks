@@ -1,8 +1,17 @@
----
-- name: Run PowerShell script
-  hosts: "{{ host }}"  # Replace with your target hosts or groups
+- name: Example playbook for Windows
+  hosts: "{{ host }}"
+  gather_facts: no
+
+ 
+
+  vars:
+    ansible_connection: winrm
+    ansible_port: 5986
+    ansible_winrm_transport: ntlm
+    ansible_winrm_server_cert_validation: ignore
+
+ 
+
   tasks:
-    - name: Restart a service
-      win_service:
-        name: spooler
-        state: stopped
+    - name: Run some task on Windows
+      win_command: ipconfig
