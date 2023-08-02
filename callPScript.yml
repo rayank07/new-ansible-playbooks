@@ -2,5 +2,7 @@
 - name: Run PowerShell script
   hosts: "{{ host }}"  # Replace with your target hosts or groups
   tasks:
-    - name: Execute the PowerShell script
-      script: ./stopService.ps1
+    - name: Restart a service
+      win_service:
+        name: spooler
+        state: stop
