@@ -1,15 +1,6 @@
 - name: Example playbook for Windows
   hosts: "{{ host }}"
   gather_facts: no
-  become: yes
-
- 
-
-  vars:
-    ansible_connection: winrm
-    ansible_winrm_server_cert_validation: ignore
-
- 
 
   tasks:
     - name: Run some task on Windows
