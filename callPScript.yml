@@ -5,4 +5,4 @@
     - name: Restart a service
       win_service:
         name: spooler
-        state: stop
+        state: stopped
