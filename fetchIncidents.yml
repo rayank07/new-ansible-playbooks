@@ -4,7 +4,7 @@
   gather_facts: no
 
   vars:
-    servicenow_instance: "https://dev124557.service-now.com"
+    servicenow_instance: "https://dev123007.service-now.com"
     servicenow_user: "admin"
     servicenow_password: "U7VFd-m+orD8"
 
