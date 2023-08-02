@@ -7,8 +7,6 @@
 
   vars:
     ansible_connection: winrm
-    ansible_port: ignore
-    ansible_winrm_transport: ignore
     ansible_winrm_server_cert_validation: ignore
 
  
