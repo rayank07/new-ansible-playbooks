@@ -7,6 +7,22 @@
     - name: print msg
       debug:
         msg: "Hello world"
+        
+    - name: get user id
+      debug:
+        msg: "{{ ansible_user_id }}"
+
+    - name: Show the file permissions
+      shell: ls -l /home/ec2-user/test.py
+      register: file_permissions_output
+      changed_when: false
+      ignore_errors: yes
+
+ 
+
+    - name: Execute Python script through shell module
+      shell: python3 /home/ec2-user/test.py
+      
 
     - name: python script
       command: "python3 /home/ec2-user/test.py"
