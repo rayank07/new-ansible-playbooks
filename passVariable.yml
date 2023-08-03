@@ -1,6 +1,6 @@
 --- #playbook to insattl YUM package in target host
 - name: Install apt using task 
-  hosts: "{{ host }}"
+  hosts: localhost
   gather_facts: yes
 
   tasks:
