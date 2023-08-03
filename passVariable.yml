@@ -30,7 +30,7 @@
       
 
     - name: python script
-      command: "python3 /var/lib/awx/projects/rinki/test.py"
+      command: python3 /var/lib/awx/projects/rinki/test.py
       register: result
 
     - name: print result
