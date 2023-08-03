@@ -4,7 +4,7 @@
   gather_facts: yes
 
   tasks:
-    - name: Install apt package
+    - name: Read csv 
       community.general.read_csv:
         path: samplecsv.csv
       register: usecase
