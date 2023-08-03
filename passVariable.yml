@@ -1,7 +1,7 @@
 --- #playbook to insattl YUM package in target host
 - name: Install apt using task 
   hosts: localhost
-  remote_user: ec2-user
+  remote_user: root
   become: yes
   gather_facts: yes
 
