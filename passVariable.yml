@@ -12,6 +12,14 @@
       debug:
         msg: "{{ ansible_user_id }}"
 
+    - name: print pwd
+      command: pwd
+      register: pwdResult
+
+    - name: print pwd result
+      debug:
+        var: pwdResult
+
     - name: Show the file permissions
       shell: ls -l /home/ec2-user/test.py
       register: file_permissions_output
