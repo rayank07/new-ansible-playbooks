@@ -1,6 +1,6 @@
 ---
 - name: extra variable demo
-  hosts: localhost
+  hosts: 35.154.24.128
   tasks:  
     - name: read python file
       #slurp:
