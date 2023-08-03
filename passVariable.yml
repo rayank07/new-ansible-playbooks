@@ -24,7 +24,7 @@
 
     - name: Execute Python script through shell module
       shell: python3 /var/lib/awx/projects/rinki/test.py
-      delegate_to: 35.154.24.128
+      delegate_to: localhost
       
 
     - name: python script
