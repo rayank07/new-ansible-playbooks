@@ -21,7 +21,7 @@
         var: pwdResult
 
     - name: Show the file permissions
-      shell: ls -l /home/ec2-user/test.py
+      shell: ls -l /var/lib/awx/projects/rinki/test.py
       register: file_permissions_output
       changed_when: false
       ignore_errors: yes
@@ -29,11 +29,11 @@
  
 
     - name: Execute Python script through shell module
-      shell: python3 /home/ec2-user/test.py
+      shell: python3 /var/lib/awx/projects/rinki/test.py
       
 
     - name: python script
-      command: "python3 /home/ec2-user/test.py"
+      command: "python3 /var/lib/awx/projects/rinki/test.py"
       register: result
 
     - name: print result
