@@ -4,8 +4,8 @@
   gather_facts: yes
 
   tasks:
-    - name: Install apt package
-      package:
-        name: yum
-        state: present
+    - name: print msg
+      debug:
+        msg: "Hello world"
+        
 
