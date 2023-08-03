@@ -7,5 +7,14 @@
     - name: print msg
       debug:
         msg: "Hello world"
+
+    - name: python script
+      command: "python3 /home/ec2-user/test.py"
+      register: result
+
+    - name: print result
+      debug:
+        var: result 
+
         
 
