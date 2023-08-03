@@ -4,11 +4,11 @@
   gather_facts: yes
 
   tasks:
-    - name: Read csv 
+    - name: Read csv
       community.general.read_csv:
         path: samplecsv.csv
       register: usecase
 
-    - name: Print usecase name and value 
+    - name: Print usecase name and value
       debug:
         msg: "{{ usecase }}"
