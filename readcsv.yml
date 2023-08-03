@@ -1,14 +1,14 @@
 ---
-- name: Read sample csv file
-  gather_facts: true
+- name: Reading csv information
   hosts: localhost
+  gather_facts: yes
 
   tasks:
-    - name: Reading csv information
+    - name: Install apt package
       community.general.read_csv:
         path: samplecsv.csv
       register: usecase
-      
+
     - name: Print usecase name and value 
       debug:
         msg: "{{ usecase }}"
