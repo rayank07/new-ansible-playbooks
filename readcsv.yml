@@ -1,6 +1,6 @@
 ---
 - name: Read sample csv file
-  gather_facts: no
+  gather_facts: true
   hosts: localhost
 
   tasks:
