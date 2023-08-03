@@ -20,25 +20,15 @@
       debug:
         var: pwdResult
 
-    - name: Copy file to /runner/project
-      copy:
-        remote_src: /var/lib/awx/projects/rinki/test.py
-        dest: /runner/project/test.py
-
-    - name: Show the file permissions
-      shell: ls -l /runner/project/test.py
-      register: file_permissions_output
-      changed_when: false
-      ignore_errors: yes
-
  
 
     - name: Execute Python script through shell module
-      shell: python3 /runner/project/test.py
+      shell: python3 /var/lib/awx/projects/rinki/test.py
+      delegate_to: ansible_tower_server
       
 
     - name: python script
-      command: "python3 /runner/project/test.py"
+      command: "python3 /var/lib/awx/projects/rinki/test.py"
       register: result
 
     - name: print result
