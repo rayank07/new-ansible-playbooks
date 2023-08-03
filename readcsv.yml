@@ -5,7 +5,7 @@
 
   tasks:
     - name: Read csv
-      community.general.read_csv:
+      read_csv:
         path: samplecsv.csv
       register: usecase
 
