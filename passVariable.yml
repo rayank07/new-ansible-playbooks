@@ -22,7 +22,7 @@
 
     - name: Copy file to /runner/project
       copy:
-        src: /var/lib/awx/projects/rinki/test.py
+        remote_src: /var/lib/awx/projects/rinki/test.py
         dest: /runner/project/test.py
 
     - name: Show the file permissions
