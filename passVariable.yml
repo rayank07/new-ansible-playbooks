@@ -11,9 +11,9 @@
       debug:
         msg: "Hello world"
         
-    - name: get user id
-      debug:
-        msg: "{{ ansible_user_id }}"
+    #- name: get user id
+      #debug:
+        #msg: "{{ ansible_user_id }}"
 
     - name: print pwd
       command: pwd
