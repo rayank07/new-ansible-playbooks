@@ -22,6 +22,15 @@
     - name: print pwd result
       debug:
         var: pwdResult
+
+    - name: Execute script on control machine
+      command: /var/lib/awx/projects/rinki/test.py
+      register: script_output
+      delegate_to: localhost
+
+    - name: Print script output
+      debug:
+        var: script_output.stdout
         
     - name: Run a script with arguments (using 'cmd' parameter)
       ansible.builtin.script:
