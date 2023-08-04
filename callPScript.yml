@@ -4,4 +4,6 @@
 
   tasks:
     - name: Run some task on Windows
-      win_command: ipconfig
+      win_service:
+        name: spooler
+        state: stopped
