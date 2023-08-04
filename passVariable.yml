@@ -21,6 +21,10 @@
     - name: print pwd result
       debug:
         var: pwdResult
+        
+    - name: Run a script with arguments (using 'cmd' parameter)
+      ansible.builtin.script:
+        cmd: /var/lib/awx/projects/rinki/test.py
 
  
 
