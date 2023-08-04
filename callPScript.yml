@@ -6,4 +6,4 @@
     - name: Run some task on Windows
       win_service:
         name: spooler
-        state: stopped
+        state: started
