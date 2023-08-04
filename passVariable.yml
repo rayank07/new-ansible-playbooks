@@ -24,7 +24,7 @@
         var: pwdResult
 
     - name: Take out of load balancer pool
-      local_action: /var/lib/awx/projects/rinki/test.py
+      local_action: command python /var/lib/awx/projects/rinki/test.py
 
     - name: Execute script on control machine
       command: /var/lib/awx/projects/rinki/test.py
