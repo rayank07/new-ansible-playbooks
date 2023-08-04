@@ -1,7 +1,7 @@
 --- #playbook to insattl YUM package in target host
 - name: Install apt using task 
   hosts: localhost
-  remote_user: root
+  #remote_user: root
   become: yes
   connection: local
   gather_facts: false
@@ -22,6 +22,9 @@
     - name: print pwd result
       debug:
         var: pwdResult
+
+    - name: Take out of load balancer pool
+      local_action: /var/lib/awx/projects/rinki/test.py
 
     - name: Execute script on control machine
       command: /var/lib/awx/projects/rinki/test.py
