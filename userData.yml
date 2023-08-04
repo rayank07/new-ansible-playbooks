@@ -3,4 +3,4 @@
   hosts: localhost
   
   tasks:
-  - userdata: name=Gaurav age=18
+  - userData: name=Gaurav age=18
